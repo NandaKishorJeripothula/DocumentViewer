@@ -34,6 +34,7 @@
 >The App View
 ![GUI View Text](screenshots/loadedData.PNG)
 >Please find the other screenshots in the screenshots directory.
+>Please find the intro video in the same directory(screenshots directory)(don't mind about the recorder watermark!)
 
 ### API Details
 These are for understanding purpose only, please check the implementation for deeper knowledge. (config/apis.js)
