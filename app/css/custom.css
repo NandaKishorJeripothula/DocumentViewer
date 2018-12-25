@@ -1,0 +1,8 @@
+.actions a :hover {
+    outline: 1px solid blue;
+    border-radius: 20px;
+}
+.actionsDir :hover{
+    outline: 4px solid blue;
+    border-radius: 20px;
+}
