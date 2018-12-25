@@ -2,7 +2,7 @@
 
 ### Contents
 * [Overview of the Application](#Overview)
-* [Technologies Frameworks Used](#Technologies-&-Frameworks-Used)
+* [Technologies Frameworks Used](#Technologies-and-Frameworks-Used)
 * [GUI Details](#GUI-Details)
 * [API Details](#API-Details)
 * [Local Setup](#Local-Setup)
@@ -22,7 +22,7 @@
 
 >This entire application is developed under 36Hours( 1 and Half Day ) which limited the implementation of the Upload only to the API level, if more time is allocated, will implement that feature as well.
 
-### Technologies & Frameworks Used
+### Technologies and Frameworks Used
 * NodeJS
 * Express Framework
 * JavaScript ( Most of the app UI is dynamically generated JavaScript)
@@ -128,7 +128,7 @@ To run the system locally, please follow the commands
 >This is excluded with the API authentication details of the cloud services provider implemented for security reason. Please reachout to ```j.kishor.bd@gmail.com``` get more information 
 * Clone the Repo
 ```
-Please find the link above
+git clone git@github.com:NandaKishorJeripothula/DocumentViewer.git
 ```
 * run the following commands inside the repo 
 ```
