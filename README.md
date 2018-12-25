@@ -33,7 +33,7 @@
 #### This Gif is a live demo of the application
 >The App View
 ![GUI View Text](screenshots/loadedData.PNG)
->Please find a demo video and other screenshots in the screenshots directory.Please Don't Mind about the wateermark of Free ScreeenRecorder at the bottomright 
+>Please find the other screenshots in the screenshots directory.
 
 ### API Details
 These are for understanding purpose only, please check the implementation for deeper knowledge. (config/apis.js)
