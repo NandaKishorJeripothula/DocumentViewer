@@ -106,30 +106,47 @@ module.exports= function(app){
             
         }
     })
-    app.get('/api/upload/',function(req,res){
-        var request = require("request");
-        var fs=require('fs');
-        var MimeLookup = require('mime-lookup');
-        var mime = new MimeLookup(require('mime-db'));
-        var options = { 
-        method: 'POST',
-        url: 'https://staging.cloud-elements.com/elements/api-v2/files?path=%2FArrowbackup%2Fjjlo',
-        headers: {
-            'Authorization': auth,
-            'accept': 'application/json',
-            'content-type': 'multipart/form-data'
-         },
-        formData: { 
-            'file':  fs.createReadStream('m.txt'),
-            'type': mime.lookup('m.txt')              
-        }
-     };
-
-        request(options, function (error, response, body) {
-        if (error) throw new Error(error);
-        else res.send(body);
-        console.log(body);
-        });
-
+    
+    app.post("/api/uploadFile",function(req,res){
+        var formidable=require('formidable');
+        const form = new formidable.IncomingForm();
+        form.parse(req, (error, fields, files) => {
+            if(error){
+            console.log(error);
+            res.send(error)
+            }
+            if(files.file)
+            {   //console.log(files.file.path+files.file.name);
+                var path= require('path');
+                var filePath=files.file.path;
+                var fileName=files.file.name;
+                var request = require("request");
+                var fs=require('fs');
+                var MimeLookup = require('mime-lookup');
+                var mime = new MimeLookup(require('mime-db'));
+               
+                var options = { 
+                    method: 'POST',
+                    url: `https://staging.cloud-elements.com/elements/api-v2/files?path=/uploads/${fileName}`,
+                    headers: {
+                        'Authorization': auth,
+                        'accept': 'application/json',
+                        'content-type': 'multipart/form-data'
+                     },
+                    formData: { 
+                        'file':  fs.createReadStream(path.resolve(filePath)),
+                        'type':mime.lookup(fileName)
+                    }
+                 };
+                request(options, function (error, response, body) {
+                    if (error) throw new Error(error);
+                    else res.send(body);
+                    console.log(body);
+                    });
+            
+                    
+            }            
+        })
     })
+   
 }

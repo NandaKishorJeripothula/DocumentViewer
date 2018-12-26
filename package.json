@@ -1,9 +1,9 @@
 {
   "name": "nodeServeer",
-  "version": "1.0.0",
+  "version": "1.0.01",
   "main": "server.js",
   "repository": "#",
-  "author": "#",
+  "author": "Nanda Kishor Jeripothula",
   "license": "none",
   "scripts": {
     "start": "node server",

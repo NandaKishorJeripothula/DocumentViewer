@@ -2,6 +2,8 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('select').material_select();
     $('.modal').modal();
+    //form actions 
+    document.uploadForm.action=SERVER+UPLOADFILE;
     var id='';
     var currentLocation='/';
     var prevId='';
@@ -12,6 +14,23 @@ $(document).ready(function(){
     }
     
     */ 
+
+    document.uploadForm.addEventListener('submit',function(e){
+        e.preventDefault();
+        
+        document.getElementById("uploadMessage").innerHTML="<h5>WAIT</h5>"
+        fetch(event.target.action, {
+            method: 'POST',
+            body:new FormData(event.target) // event.target is the form
+        }).then((resp) => {
+            if(resp.status==200){
+                document.getElementById("uploadMessage").innerHTML=`<a href="#!" class="modal-close waves-effect waves-green btn float-right">Success ...Close</a></span>`
+            };
+        }).catch((error) => {
+            console.log(error);
+        });
+
+    });
    function isJSON(data) {
     try {
         JSON.parse(data);
@@ -70,12 +89,6 @@ $(document).ready(function(){
             }
         })
     });
-    fileInput=document.getElementById("fileInput");
-    fileInput.addEventListener('change',handleInput,false);
-    function handleInput(e){
-        var fileMeta= e.target.files[0].value;
-        console.log(fileMeta);
-    }
     $('.collapsible #uploadHereExploreDataCard').on('click', function(e) {
         //e.stopPropagation();
     });

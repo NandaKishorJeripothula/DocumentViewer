@@ -10,7 +10,7 @@
 #### This is a web based file broswer client to navigate download and upload the files
 > The Key Features of the Application
 * User can navigate throughout the drive / folder with UI like ususal file managers and view the metadata, ( size, dateModified, etc.,)
-* Allows the User to download the contents into the local system with UI.
+* Allows the User to download and **upload** the contents into the local system with UI. ***Updated***
 * User can view the profile(Name and ID) of the owner of the folder that the system rendering. 
 * Entire Application is fully responsive all kinds of devices (tested).
 > And it offers the following APIs
@@ -21,6 +21,8 @@
 * All these APIs are testable with API testers like POSTMan client.
 
 >This entire application is developed under 36Hours( 1 and Half Day ) which limited the implementation of the Upload only to the API level, if more time is allocated, will implement that feature as well.
+
+> Hey!!! its **updated an version**, now this is application is able to upload the file with UI   
 
 ### Technologies and Frameworks Used
 * NodeJS

@@ -6,3 +6,8 @@
     outline: 4px solid blue;
     border-radius: 20px;
 }
+.modalNew {
+    content: -10px;
+    max-height: 150px;
+
+}
