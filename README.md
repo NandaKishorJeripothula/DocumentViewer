@@ -22,7 +22,7 @@
 
 >This entire application is developed under 36Hours( 1 and Half Day ) which limited the implementation of the Upload only to the API level, if more time is allocated, will implement that feature as well.
 
-> Hey!!! its **updated an version**, now this is application is able to upload the file with UI   
+> Hey!!! its **an updated  version**, now this is application is able to upload the file with UI   
 
 ### Technologies and Frameworks Used
 * NodeJS
