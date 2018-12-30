@@ -17,7 +17,7 @@ function sideBarSticker() {
 document.addEventListener('DOMContentLoaded', function() {
     //SIDE MENU
     {document.getElementById('sideMenu').innerHTML=`
-            <div class="sidebar" id="sideBar" data-color="purple" data-background-color="white" data-image="media/sidebar.jpg">
+            <div class="sidebar" id="sideBar" data-color="purple" data-background-color="white" data-image="">
             <!--
                 Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
         
